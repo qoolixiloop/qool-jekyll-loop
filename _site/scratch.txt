@@ -383,4 +383,63 @@ Code:
     </p>
     {{ content }}
 
-
+## Deployment
+get the site ready for production
+### Gemfile
+ensures the version of Jekyll and other gems remains consistent across different environments
+Where:
+    /Gemfile (at the root directory)
+Code:
+    source 'https://rubygems.org'
+    gem 'jekyll'
+Built:
+    $ bundle install 
+installs the gems and creates Gemfile.lock which locks the current gem versions for a future bundle install. To see the installation path.
+    $ bundle info jekyll
+     Installed at: /home/benzro/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0
+Update:
+If you ever want to update your gem versions you can run 
+    $ bundle update
+### Run server with Gemfile
+When using a Gemfile, you’ll run commands like $ jekyll serve, with bundle exec prefixed. This restricts your Ruby environment to only use gems set in your Gemfile.
+    $ bundle exec jekyll serve
+### Plugins
+create custom generated content specific to your site. many plugins available or you can write your own.
+    jekyll-sitemap - Creates a sitemap file to help search engines index content
+    jekyll-feed - Creates an RSS feed for your posts
+    jekyll-seo-tag - Adds meta tags to help with SEO
+Where
+    /Gemfile
+Change:
+    group :jekyll_plugins do
+      gem 'jekyll-sitemap'
+      gem 'jekyll-feed'
+      gem 'jekyll-seo-tag'
+    end
+Run again to bundle and change the Gemfile.lock:
+    $ bundle update
+Setup for gems:
+    jekyll-sitemap doesn’t need any setup, it will create your sitemap on build.
+    jekyll-feed and jekyll-seo-tag you need to add tags to _layouts/default.html
+Change:
+    _layouts/default.html
+    {% feed_meta %}
+    {% seo %}
+Run server again and check files:
+    _site/sitemap.xml
+    _site/feed.xml
+Check Browser F12, Elements, <HEAD> tag:
+    added one link for jekill-fee: file feed.xml
+    added many lines for: jekyy-seo-tag
+### Environments
+output something in production but not in development
+set the environment by using the JEKYLL_ENV environment variable, default is "development"
+Running a command like bundle with global variable "JEKYLL_ENV=production", e.g.
+    $ JEKYLL_ENV=production bundle exec jekyll build
+Example Analytics Script
+    my-analytics-script
+Code:
+    {% if jekyll.environment == "production" %}
+      <script src="my-analytics-script.js"></script>
+    {% endif %}
+    
