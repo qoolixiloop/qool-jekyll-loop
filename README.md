@@ -607,7 +607,7 @@ Code:
 
 Run server again and check files:  
 * _site/sitemap.xml  
-*_site/feed.xml  
+* _site/feed.xml  
     
 Check Browser F12, Elements, <HEAD> tag:  
 * added one link for jekill-fee: file feed.xml  
