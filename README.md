@@ -3,10 +3,15 @@ Jekyll is a simple, blog-aware, static site generator perfect for personal, proj
 
 ## Links
 Jekyll on Github  
+
     https://github.com/jekyll/jekyll  
+    
 Jekyll tutorial  
+
     https://jekyllrb.com/docs/step-by-step/01-setup/  
+    
 Ruby installation  
+
     https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04  
 
 ## Install dependecies for rbenv and ruby  
@@ -21,60 +26,88 @@ add some echo export commands if not already there, and source it
     $ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build  
 
 ## install local ruby with rbenv using ruby-build  
-list all available version   
+list all available version 
+
     $ rbenv install -l  
+
 choose a version to install  
+
     $ rbenv install 2.6.0  
+    
 set it global  
+
     $ rbenv global 2.6.0  
+    
 ### Explanation:
 show all installed versions of ruby  
+
     $ rbenv versions  
     system (ubuntu installation, sudo apt install )  
     * 2.6.0 (rbenv local installation, set with $ rbenv global, gem install, bundle install, ruby build)  
+    
 set a local ruby version to a folder  
+
     $ rbenv local 2.1.0  
     applyied to a folder adds file: .ruby-version with content: 2.1.0  
+    
 show active global ruby version  
+
     $ ruby -version (if not in a folder containing file .ruby-version with content 2.1.0)  
     2.6.0 (if set with $ rbenv global)  
+    
 show active global ruby version  
+
     $ ruby -version  
     2.1.0 (if in a folder set with $ rbenv local and containing file .ruby-version with content 2.1.0)  
 
 ## install packages (gems) with gem  
 useful information where gems are stored and $PATH  
+
     $ gem env  
+    
 turn off installing documentation, can take a long time  
+
     echo "gem: --no-document" > ~/.gemrc  
+    
 install bundler (Bundler is a tool that manages gem dependencies for projects)  
 reads file Gemfile, file Gemfile.lock  
+
     $ gem install bundler  (installed under enabled version, global or local)  
+    
 rehash, rbenv works by creating a directory of shims, which point to the files   
 used by the Ruby version which is enabled.  
+
     $ rbenv rehash  
+    
 install jekyll  
+
     $ gem install jekyll bundler  
 
 ## start jekyll server  
     $ jekyll serve  
-like $jekyll build && starting server at http://localhost:4000  
+same as $jekyll build && starting server at http://localhost:4000  
 Where:   
     _site  
 
 ## use global variables  
 Info:  
+
     https://jekyllrb.com/docs/variables/  
+    
 Objects:   
+
     site.xyz , page.xyz, paginator.xyz, content, layout    
+    
 You can define own custom front matter (xyz) and use them as variables  
 
 ## use Liquid  
 Objects (outputs a variable called page.title, page is the document)  
+Code:  
 ```html
     {{ page.title }}
 ```  
 Tags (flow control logic, outputs sidebar if page.sidebar is true)  
+Code:  
 ```html
     {% if page.show_sidebar %}  
       <div class="sidebar">  
@@ -82,13 +115,14 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true)
       </div>  
     {% endif %}  
 ```
-Filters  ( puts string through a filter called capitalize and outputs Hi)  
+Filters  ( puts string through a filter called capitalize and outputs Hi)
+Code:  
 ```html
     {{ "hi" | capitalize }}  
 ```
 ## use Front Matter  
 Purpose:   
-    yaml snippet used to set variables  
+    * yaml snippet used to set variables  
 Code:  
 ```html
     ---
@@ -108,11 +142,11 @@ Code:
 
 ## create a Layout and use it  
 Where:   
-    _layout  
+    * _layout  
 Purpose:   
-    to avoid duplicate code  
+    * to avoid duplicate code  
 Specialty:   
-    no front matter, and a content variable  
+    * no front matter, and a content variable  
 Code:  
 ```html
     <!doctype html>
@@ -126,8 +160,9 @@ Code:
       </body>
     </html>
 ```
-Use:   
-   change index.html file  
+Change:   
+   * index.html 
+Code:  
 ```html
     ---
     layout: default
@@ -136,8 +171,9 @@ Use:
     <h1>{{ "Hello World!" | downcase }}</h1>
 ```
 
-Use:   
-    about.md  
+Add:   
+    * about.md  
+Code:  
 ``` md
     ---
     layout: default
@@ -147,15 +183,18 @@ Use:
     This page tells you a little bit about me.
 ```
 Access:  
-     with .html even though it is an .md file: http://localhost:4000/about.html  
+     * with .html even though it is an .md file: 
+     
+     http://localhost:4000/about.html  
 
 ## Include tag  
 Where:   
-    _includes  
+    * _includes  
 Purpose:   
-    allows you to include content from another file  
-Use:   
-    navigation.html  
+    * allows you to include content from another file  
+Add:   
+    * navigation.html  
+Code:  
 ```html
     <nav>
       <a href="/">Home</a>
@@ -163,7 +202,8 @@ Use:
     </nav>
 ```
 Change:  
-    Layout.html  
+    * Layout.html  
+Code:  
 ```html
     <body>
         {% include navigation.html %}
@@ -171,7 +211,8 @@ Change:
     </body>
 ```
 Add styling:  
-    navigation.html  
+    * navigation.html  
+Code:  
 ```html
     <nav>
       <a href="/" {% if page.url == "/" %}style="color: red;"{% endif %}>
@@ -185,11 +226,11 @@ Add styling:
 
 ## Data files  
 Where:   
-    _data  
+    * _data  
 Purpose:  
-    store an array of navigation items each with a name and link  
-Use:  
-    _data/navigation.yml  
+    * store an array of navigation items each with a name and link  
+Add:  
+    * _data/navigation.yml  
 Code:  
 ```yml
     - name: Home
@@ -198,7 +239,8 @@ Code:
       link: /about.html
 ```
 Change:  
-    navigation.html  
+    * navigation.html 
+Code:  
 ```html
     <nav>
       {% for item in site.data.navigation %}
@@ -211,9 +253,9 @@ Change:
 
 ## Assets  
 Where:  
-    assets/css, assets/images, assets/js   
+    * assets/css, assets/images, assets/js   
 What:  
-    CSS, JS, images  
+    * CSS, JS, images  
 Code:  
 ```html
     <nav>
@@ -224,33 +266,39 @@ Code:
       {% endfor %}
     </nav>
 ```
-Use:  
-    css/styles.scss  
+Add:  
+    * css/styles.scss  
+Code:  
 ```scss
     ---
     ---
     @import "main";
-`` 
-empty front matter at the top tells Jekyll it needs to process the file  
-@import "main" tells Sass to look for a file called main.scss in the sass directory (_sass/ by default)  
+``` 
+> empty front matter at the top tells Jekyll it needs to process the file. @import "main" tells Sass to look for a file called main.scss in the sass directory (_sass/ by default)  
+
 Use:  
-    _sass/main.scss  
+    * _sass/main.scss  
+    
+Code:  
 ```scss
     .current {
       color: green;
     }
 ```
 Add link to stylesheet:  
-    layout/default.html  
+    * layout/default.html  
+Code:  
 ```html
     <link rel="stylesheet" href="/assets/css/styles.css">
 ```
 
 ## Blogging  
 Where:  
-    _posts  
+    * _posts  
+    
 Post:  
-    _posts/2018-08-20-bananas.md  
+    * _posts/2018-08-20-bananas.md 
+    
 Code:  
 ```md
     ---
@@ -267,8 +315,10 @@ Code:
     when ripe.
 ```
 author is a custom variable, it’s not required and could have been named something like creator  
+
 Create new layout:  
-    _layouts/post.html  
+    * _layouts/post.html  
+    
 Code:  
 ```html
     ---  
@@ -280,7 +330,9 @@ Code:
 ```
 This is an example of layout inheritance. The post layout outputs the title, date, author and content body which is wrapped by the default layout.  
 List posts:  
-    /blog.html (in root directory)  
+    * /blog.html (in root directory)  
+    
+Code:  
 ```html
     ---
     layout: default
@@ -302,15 +354,19 @@ Jekyll makes posts available at site.posts
     - post.title is pulled from the post filename and can be overridden by setting title in front matter
     - post.excerpt is the first paragraph of content by default
 Change:  
-    _data/navigation.yml  
-Code:  
+    * _data/navigation.yml  
+    
+Code: 
+```yml
     - name: Blog  
       link: /blog.html  
+```
 
 ## Collections  
 like posts but content doesn't habe to be grouped by date  
 Where:  
-    /_config.yml (in root directory)  
+    * /_config.yml (in root directory)  
+    
 Code:  
 ```yml
     collections:
@@ -333,10 +389,13 @@ Code:
           layout: "default"
 ```
 all posts to automatically have the post layout, authors to have author and everything else to use the default. Now you can remove layout from the front matter of all pages and posts. Note that any time you update _config.yml you’ll need to restart Jekyll for the changes to take affect.  
+
 Where:  
-    _authors  
+    * _authors  
+    
 Add:  
-    _authors/jill.md  
+    * _authors/jill.md  
+    
 Code:  
 ```md
     ---
@@ -347,7 +406,8 @@ Code:
     Jill is an avid fruit grower based in the south of France.
 ```
 Add:  
-    _authors/ted.md  
+    * _authors/ted.md  
+    
 Code:  
 ```md
     ---
@@ -358,8 +418,10 @@ Code:
     Ted has been eating fruit since he was baby.
 ```
 Add:  
-    _layouts/staff.html  
+    * _layouts/staff.html  
+    
 iterate over site.authors  
+
 Code:  
 ```html
     ---
@@ -379,14 +441,16 @@ Code:
 ```
 Since the content is markdown, you need to run it through the markdownify filter. This happens automatically when outputting using {{ content }} in a layout  
 Change:  
-    _data/navigation.yml  
-Add:  
+    * _data/navigation.yml  
+    
+Code:   
 ```yml
     -name: Staff  
       link: /staff.html  
 ```
-Create:  
-    _layouts/author.html  
+Add:  
+    * _layouts/author.html  
+    
 Code:
 ```html
     ---
@@ -403,8 +467,10 @@ Code:
       {% endfor %}
     </ul>
 ```
+
 Change:  
-    _layouts/post.html  
+    * _layouts/post.html  
+    
 Code:  
 ```html
     ---
@@ -427,29 +493,41 @@ get the site ready for production
 ### Gemfile  
 ensures the version of Jekyll and other gems remains consistent across different environments  
 Where:  
-    /Gemfile (at the root directory)  
+    * /Gemfile (at the root directory)  
 Code:  
+```
     source 'https://rubygems.org'  
     gem 'jekyll'  
-Built:  
+```
+Built: 
+
     $ bundle install   
+    
 installs the gems and creates Gemfile.lock which locks the current gem versions for a future bundle install. To see the installation path.  
+
     $ bundle info jekyll  
      Installed at: /home/benzro/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0  
+     
 Update:  
 If you ever want to update your gem versions you can run   
+
     $ bundle update  
+    
 ### Run server with Gemfile  
 When using a Gemfile, you’ll run commands like $ jekyll serve, with bundle exec prefixed. This restricts your Ruby environment to only use gems set in your Gemfile.  
+
     $ bundle exec jekyll serve  
+    
 ### Plugins  
 create custom generated content specific to your site. many plugins available or you can write your own.  
-    - jekyll-sitemap - Creates a sitemap file to help search engines index content  
-    - jekyll-feed - Creates an RSS feed for your posts  
-    - jekyll-seo-tag - Adds meta tags to help with SEO  
-Where  
-    /Gemfile  
-Change:  
+
+    * jekyll-sitemap - Creates a sitemap file to help search engines index content  
+    * jekyll-feed - Creates an RSS feed for your posts  
+    * jekyll-seo-tag - Adds meta tags to help with SEO  
+    
+Where:  
+    * /Gemfile  
+Code:    
 ```
     group :jekyll_plugins do
       gem 'jekyll-sitemap'
@@ -458,29 +536,39 @@ Change:
     end
 ```
 Run again to bundle and change the Gemfile.lock:  
+
     $ bundle update  
+    
 Setup for gems:  
-    - jekyll-sitemap doesn’t need any setup, it will create your sitemap on build.  
-    - jekyll-feed and jekyll-seo-tag you need to add tags to _layouts/default.html  
+
+    * jekyll-sitemap doesn’t need any setup, it will create your sitemap on build.  
+    * jekyll-feed and jekyll-seo-tag you need to add tags to _layouts/default.html  
+    
 Change:  
-    _layouts/default.html  
+    * _layouts/default.html  
+    
 ```html
     {% feed_meta %}
     {% seo %}
 ```
+
 Run server again and check files:  
-    _site/sitemap.xml  
-    _site/feed.xml  
+    * _site/sitemap.xml  
+    *_site/feed.xml  
+    
 Check Browser F12, Elements, <HEAD> tag:  
-    - added one link for jekill-fee: file feed.xml  
-    - added many lines for: jekyy-seo-tag  
+    * added one link for jekill-fee: file feed.xml  
+    * added many lines for: jekyy-seo-tag  
+    
 ### Environments  
 output something in production but not in development  
 set the environment by using the JEKYLL_ENV environment variable, default is "development"    
 Running a command like bundle with global variable "JEKYLL_ENV=production", e.g.
+
     $ JEKYLL_ENV=production bundle exec jekyll build  
+    
 Example Analytics Script  
-    my-analytics-script.js  
+    * my-analytics-script.js  
 Code:  
 ```html
     {% if jekyll.environment == "production" %}  
@@ -489,20 +577,28 @@ Code:
 ```
 This code placed anywhere in your code, will only run, if you run build in production mode.      
 To only run the code in development you would do the following:  
+Code:  
 ```html
     {% if jekyll.environment == "development" %}
     ....
     {% endif %}
 ```
+
 Configuration files:  
-To switch part of your config settings depending on the environment, use the build/serve command option, for example --config _config.yml,_config_development.yml. Settings in later files override settings in earlier files.   
+To switch part of your config settings depending on the environment, use the build/serve command option, for example --config _config.yml,_config_development.yml. Settings in later files override settings in earlier files.  
+
     $ [bundle exec] jekyll (build | serve) --config _config.yml,_config_development.yml  
-### Deployment  
+    
+### Deploy  
 get the site onto a production server. The most basic way to do this is to run a production build  
+
     $ JEKYLL_ENV=production bundle exec jekyll build  
+    
 and copy the contents of _site to your server  
 A better way is to automate this process using a CI or 3rd party  
-https://jekyllrb.com/docs/deployment/automated/  
+
+    https://jekyllrb.com/docs/deployment/automated/  
 
 ## Cheetsheet  
-https://learn.cloudcannon.com/jekyll-cheat-sheet/  
+
+    https://learn.cloudcannon.com/jekyll-cheat-sheet/  
