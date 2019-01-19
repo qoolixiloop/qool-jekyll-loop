@@ -19,6 +19,6 @@ defaults:
       layout: "default"
       
 baseurl: "/qool-jekyll-loop"
-url: "https://qoolixiloop.github.io/qool-jekyll-loop"
+url: "https://qoolixiloop.github.io"
 
 theme: jekyll-theme-merlot
