@@ -1,6 +1,6 @@
 - name: Home
-  link: /
+  link: /qool-jekyll-loop/
 - name: About
-  link: /about.html
+  link: /qool-jekyll-loop/about.html
 - name: Blog
-  link: /blog.html
+  link: /qool-jekyll-loop/blog.html
