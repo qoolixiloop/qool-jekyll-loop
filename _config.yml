@@ -23,3 +23,5 @@ url: "https://qoolixiloop.github.io"
 repository: "qoolixiloop/qool-jekyll-loop"
 
 theme: jekyll-theme-merlot
+
+markdown: kramdown
