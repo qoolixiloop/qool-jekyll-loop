@@ -18,19 +18,24 @@ Ruby installation for Linux Ubuntu
 ## Install dependecies for rbenv and ruby  
     $ sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev  
 
-## Install rbenv  
-    $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv  
-    $ vim ~/.bashrc  
-    
 Add some echo export commands if not already there, and source it. 
-
+Not used if you always use rbenv to install gems.
     $ echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
     $ echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
     $ echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
     $ source ~/.bashrc
 
+## Install rbenv  
+    $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv  
+    $ vim ~/.bashrc  
+    
+Add some echo export commands if not already there, and source it. 
+    $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc 
+    $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc 
+
 ## Install ruby-build with rbenv  
     $ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build  
+    $ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc 
 
 ## Install local ruby with rbenv using ruby-build  
 List all available versions. 
