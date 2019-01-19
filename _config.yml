@@ -20,3 +20,5 @@ defaults:
       
 baseurl: "/qool-jekyll-loop"
 url: "https://qoolixiloop.github.io/qool-jekyll-loop"
+
+theme: jekyll-theme-merlot
