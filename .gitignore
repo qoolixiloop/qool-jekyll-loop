@@ -42,6 +42,9 @@ doc/**/*.pdf
 .~lock.*#
 *.swp
 *.a
+_site
+.sass-cache
+.jekyll-metadata
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # REVERSE ABOVE IGNORE PATTERN
