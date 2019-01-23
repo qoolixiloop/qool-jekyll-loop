@@ -1,0 +1,1 @@
+Sitemap: /qool-jekyll-loop/sitemap.xml

@@ -17,7 +17,6 @@
 # ignore directorynames in ANY directory: 
 # IGNORE:   "../DIRNAME/.." 
 build/
-_site/
 
 # ignore filetypes in directoryname:
 # IGNORE:   "./DIRNAME/*.FILETYPE", 
