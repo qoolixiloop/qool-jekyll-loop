@@ -1,4 +1,5 @@
 ---
+layout: default_
 short_name: qoolixi
 name: Qool ixi Loop
 position: Chief Programmer

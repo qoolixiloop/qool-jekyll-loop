@@ -1,18 +1,19 @@
 ---
+layout: default_
 author: qoolixiloop
 ---
 
 # Jekyll Tutorial
-> This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial.    
-> This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll.  
-> Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.  
+This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial.    
+This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll.  
+Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.  
 
 ## Links
-####Jekyll on Github  
+#### Jekyll on Github  
 
 > https://github.com/jekyll/jekyll  
     
-####Jekyll tutorial  
+#### Jekyll tutorial  
 
 > https://jekyllrb.com/docs/step-by-step/01-setup/  
     
@@ -144,33 +145,34 @@ You can define own custom front matter (xyz) and use them as variables.
 Objects (outputs a variable called page.title, page is the document).
 
 #### Code:  
-```html
+{% raw %}
     {{ page.title }}
-```  
+{% endraw %} 
 Tags (flow control logic, outputs sidebar if page.sidebar is true).
 
 #### Code:  
-```html
+{% raw %}
     {% if page.show_sidebar %}  
       <div class="sidebar">  
         sidebar content  
       </div>  
     {% endif %}  
-```
+{% endraw %}
 #### Filters:
 * Puts string through a filter called capitalize and outputs Hi.
 
 #### Code:  
-```html
-    {{ "hi" | capitalize }}  
-```
+{% raw %}
+ {{ "hi" | capitalize }}
+{% endraw %}
+
 ## Use Front Matter  
 #### Purpose:   
 * yaml snippet used to set variables in Markdown/html files  
 * set layout configuration in Markdown/html files
 
 #### Code:  
-```html
+{% raw %}
     ---
     title: Home
     ---
@@ -184,7 +186,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
         <h1>{{ "Hello World!" | downcase }}</h1>
       </body>
     </html>
-```
+{% endraw %}
 
 ## Create a Layout and use it  
 #### Where we see the layout files:
@@ -199,7 +201,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
 * usually no front matter, and a content variable  
 
 #### Code:  
-```html
+{% raw %}
     <!doctype html>
     <html>
       <head>
@@ -210,19 +212,19 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
         {{ content }}
       </body>
     </html>
-```
+{% endraw %}
 
 #### Change file:   
 * index.html 
 
 #### Code:  
-```html
+{% raw %}
     ---
     layout: default
     title: Home
     ---
     <h1>{{ "Hello World!" | downcase }}</h1>
-```
+{% endraw %}
 
 #### Add file:   
 * about.md  
@@ -255,29 +257,29 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
 * navigation.html  
 
 #### Code:  
-```html
+{% raw %}
     <nav>
       <a href="/">Home</a>
       <a href="/about.html">About</a>
     </nav>
-```
+{% endraw %}
 
 #### Change file:  
 * Layout.html  
 
 #### Code:  
-```html
+{% raw %}
     <body>
         {% include navigation.html %}
         {{ content }}
     </body>
-```
+{% endraw %}
 
 #### Add styling to file:  
 * navigation.html  
 
 #### Code:  
-```html
+{% raw %}
     <nav>
       <a href="/" {% if page.url == "/" %}style="color: red;"{% endif %}>
         Home
@@ -286,7 +288,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
         About
       </a>
     </nav>
-```
+{% endraw %}
 
 ## Data files  
 #### Where we find them:
@@ -312,7 +314,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
 * navigation.html 
 
 #### Code:  
-```html
+{% raw %}
     <nav>
       {% for item in site.data.navigation %}
         <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
@@ -320,7 +322,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
         </a>
       {% endfor %}
     </nav>
-```
+{% endraw %}
 
 ## Assets  
 #### Where we find them:
@@ -333,7 +335,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
 * and more, e.g. mp3  
 
 #### Code:  
-```html
+{% raw %}
     <nav>
       {% for item in site.data.navigation %}
         <a href="{{ item.link }}" {% if page.url == item.link %}
@@ -341,7 +343,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
         </a>
       {% endfor %}
     </nav>
-```
+{% endraw %}
 
 #### Add file:  
 * css/styles.scss  
@@ -368,9 +370,9 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
 * layout/default.html  
 
 #### Code:  
-```html
+{% raw %}
     <link rel="stylesheet" href="/assets/css/styles.css">
-```
+{% endraw %}
 
 ## Blogging  
 #### Where to find:
@@ -382,7 +384,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
 * _posts/2018-08-20-bananas.md 
     
 #### Code:  
-```md
+{% raw %}
     ---
     layout: post
     author: jill
@@ -395,28 +397,28 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
     and firmness, but is usually elongated and curved, with soft flesh rich in
     starch covered with a rind, which may be green, yellow, red, purple, or brown
     when ripe.
-```
+{% endraw %}
 > author is a custom variable, it’s not required and could have been named something like creator.  
 
 #### Create new layout:  
 * _layouts/post.html  
     
 #### Code:  
-```html
+{% raw %}
     ---  
     layout: default
     ---
     <h1>{{ page.title }}</h1>
     <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
     {{ content }}
-```
+{% endraw %}
 > This is an example of layout inheritance. The post layout outputs the title, date, author and content body which is wrapped by the default layout.  
 
 #### File which lists posts:  
 * /blog.html (in root directory)  
     
 #### Code:  
-```html
+{% raw %}
     ---
     layout: default
     title: Blog
@@ -430,7 +432,7 @@ Tags (flow control logic, outputs sidebar if page.sidebar is true).
         </li>
       {% endfor %}
     </ul>
-```
+{% endraw %}
 
 Typically a blog has a page which lists all the posts.  
 
@@ -517,7 +519,7 @@ Like posts but content doesn't habe to be grouped by date.
 Iterate over site.authors  
 
 #### Code:  
-```html
+{% raw %}
     ---
     layout: default
     title: Staff
@@ -532,7 +534,7 @@ Iterate over site.authors
         </li>
       {% endfor %}
     </ul>
-```
+{% endraw %}
 > Since the content is markdown, you need to run it through the markdownify filter. This happens automatically when outputting using {{ content }} in a layout.
 
 #### Change file:  
@@ -548,7 +550,7 @@ Iterate over site.authors
 * _layouts/author.html  
     
 #### Code:
-```html
+{% raw %}
     ---
     layout: default
     ---
@@ -562,13 +564,13 @@ Iterate over site.authors
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
-```
+{% endraw %}
 
 #### Change file:  
 * _layouts/post.html  
     
 #### Code:  
-```html
+{% raw %}
     ---
     layout: default
     ---
@@ -581,7 +583,7 @@ Iterate over site.authors
       {% endif %}
     </p>
     {{ content }}
-```
+{% endraw %}
 
 ## Deployment  
 Get the site ready for production.  
@@ -660,10 +662,10 @@ Create custom generated content specific to your site. many plugins available or
 * _layouts/default.html  
 
 #### Code:  
-```html
+{% raw %}
     {% feed_meta %}
     {% seo %}
-```
+{% endraw %}
 
 #### Run server again and check files:  
 * _site/sitemap.xml  
@@ -686,22 +688,22 @@ Running a command like bundle with global variable "JEKYLL_ENV=production", e.g.
 * my-analytics-script.js  
 
 #### Code:  
-```html
+{% raw %}
     {% if jekyll.environment == "production" %}  
       <script src="my-analytics-script.js"></script>  
     {% endif %}
-```
+{% endraw %}
 > This code placed anywhere in your code, will only run, if you run build in production mode.      
 
 #### To only run the code in development
  you would do the following:  
 
 #### Code:  
-```html
+{% raw %}
     {% if jekyll.environment == "development" %}
     ....
     {% endif %}
-```
+{% endraw %}
 
 #### Configuration files:  
 To switch part of your config settings depending on the environment, use the build/serve command option, for example ` --config _config.yml,_config_development.yml`. Settings in later files override settings in earlier files.  
