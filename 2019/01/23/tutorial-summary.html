@@ -1,4 +1,47 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/qool-jekyll-loop/assets/css/style.css?v=7cc8c3e14793cff583695dee3e981d51c0018af6">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Tutorial Summary | Official Jekyll step by step tutorial with theme</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Tutorial Summary" />
+<meta name="author" content="qoolixiloop" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Jekyll Tutorial This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial. This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll. Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories." />
+<meta property="og:description" content="Jekyll Tutorial This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial. This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll. Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories." />
+<link rel="canonical" href="/qool-jekyll-loop/2019/01/23/tutorial-summary.html" />
+<meta property="og:url" content="/qool-jekyll-loop/2019/01/23/tutorial-summary.html" />
+<meta property="og:site_name" content="Official Jekyll step by step tutorial with theme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-23T00:00:00+01:00" />
+<script type="application/ld+json">
+{"description":"Jekyll Tutorial This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial. This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll. Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.","@type":"BlogPosting","headline":"Tutorial Summary","dateModified":"2019-01-23T00:00:00+01:00","datePublished":"2019-01-23T00:00:00+01:00","url":"/qool-jekyll-loop/2019/01/23/tutorial-summary.html","mainEntityOfPage":{"@type":"WebPage","@id":"/qool-jekyll-loop/2019/01/23/tutorial-summary.html"},"author":{"@type":"Person","name":"qoolixiloop"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Official Jekyll step by step tutorial with theme</h1>
+        <h2>This is the result of the official step by step tutorial on Jekyll's website enhanced by a nice theme. </h2>
+
+        <section id="downloads">
+          
+          <a href="http://github.com/qoolixiloop/qool-jekyll-loop" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <html>
   <head>
     <meta charset="utf-8">
     <title>Tutorial Summary</title>
@@ -34,29 +77,19 @@
     <a href="/staff.html" >Staff</a>
   
 </nav>
-    <h1>Tutorial Summary</h1>
-
-<p>
-  23 Jan 2019
-  
-  
-</p>
-
-<h1 id="jekyll-tutorial">Jekyll Tutorial</h1>
-<blockquote>
-  <p>This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial.  <br />
+    <h1 id="jekyll-tutorial">Jekyll Tutorial</h1>
+<p>This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial.  <br />
 This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll.<br />
 Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.</p>
-</blockquote>
 
 <h2 id="links">Links</h2>
-<p>####Jekyll on Github</p>
+<h4 id="jekyll-on-github">Jekyll on Github</h4>
 
 <blockquote>
   <p>https://github.com/jekyll/jekyll</p>
 </blockquote>
 
-<p>####Jekyll tutorial</p>
+<h4 id="jekyll-tutorial-1">Jekyll tutorial</h4>
 
 <blockquote>
   <p>https://jekyllrb.com/docs/step-by-step/01-setup/</p>
@@ -223,21 +256,37 @@ Reads file Gemfile, file Gemfile.lock-</p>
 <p>Objects (outputs a variable called page.title, page is the document).</p>
 
 <h4 id="code">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Tutorial Summary
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ page.title }}
 </code></pre></div></div>
+
 <p>Tags (flow control logic, outputs sidebar if page.sidebar is true).</p>
 
 <h4 id="code-1">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if page.show_sidebar %}  
+  &lt;div class="sidebar"&gt;  
+    sidebar content  
+  &lt;/div&gt;  
+{% endif %}  
 </code></pre></div></div>
+
 <h4 id="filters">Filters:</h4>
 <ul>
   <li>Puts string through a filter called capitalize and outputs Hi.</li>
 </ul>
 
 <h4 id="code-2">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Hi  
-</code></pre></div></div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>{{ “hi”</td>
+      <td>capitalize }}</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="use-front-matter">Use Front Matter</h2>
 <h4 id="purpose">Purpose:</h4>
 <ul>
@@ -246,19 +295,20 @@ Reads file Gemfile, file Gemfile.lock-</p>
 </ul>
 
 <h4 id="code-3">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ---
-    title: Home
-    ---
-    <span class="cp">&lt;!doctype html&gt;</span>
-    <span class="nt">&lt;html&gt;</span>
-      <span class="nt">&lt;head&gt;</span>
-        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;title&gt;</span>Tutorial Summary<span class="nt">&lt;/title&gt;</span>
-      <span class="nt">&lt;/head&gt;</span>
-      <span class="nt">&lt;body&gt;</span>
-        <span class="nt">&lt;h1&gt;</span>hello world!<span class="nt">&lt;/h1&gt;</span>
-      <span class="nt">&lt;/body&gt;</span>
-    <span class="nt">&lt;/html&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: Home
+---
+<span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>{{ page.title }}<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>{{ "Hello World!" | downcase }}<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
 <h2 id="create-a-layout-and-use-it">Create a Layout and use it</h2>
@@ -277,34 +327,17 @@ Reads file Gemfile, file Gemfile.lock-</p>
 </ul>
 
 <h4 id="code-4">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cp">&lt;!doctype html&gt;</span>
-    <span class="nt">&lt;html&gt;</span>
-      <span class="nt">&lt;head&gt;</span>
-        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;title&gt;</span>Tutorial Summary<span class="nt">&lt;/title&gt;</span>
-      <span class="nt">&lt;/head&gt;</span>
-      <span class="nt">&lt;body&gt;</span>
-        <span class="nt">&lt;h1&gt;</span>Kiwifruit<span class="nt">&lt;/h1&gt;</span>
 
-<span class="nt">&lt;p&gt;</span>
-  22 Aug 2018
-  
-  
-    - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/authors/ted.html"</span><span class="nt">&gt;</span>Ted Doe<span class="nt">&lt;/a&gt;</span>
-  
-<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
-berry of several species of woody vines in the genus Actinidia.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>The most common cultivar group of kiwifruit is oval, about the size of a large
-hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in
-diameter). It has a fibrous, dull greenish-brown skin and bright green or
-golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
-texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
-
-      <span class="nt">&lt;/body&gt;</span>
-    <span class="nt">&lt;/html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>{{ page.title }}<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    {{ content }}
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
 <h4 id="change-file">Change file:</h4>
@@ -313,11 +346,12 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-5">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ---
-    layout: default
-    title: Home
-    ---
-    <span class="nt">&lt;h1&gt;</span>hello world!<span class="nt">&lt;/h1&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+title: Home
+---
+&lt;h1&gt;{{ "Hello World!" | downcase }}&lt;/h1&gt;
 </code></pre></div></div>
 
 <h4 id="add-file">Add file:</h4>
@@ -354,10 +388,11 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-7">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;nav&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about.html"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/nav&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;nav&gt;
+  &lt;a href="/"&gt;Home&lt;/a&gt;
+  &lt;a href="/about.html"&gt;About&lt;/a&gt;
+&lt;/nav&gt;
 </code></pre></div></div>
 
 <h4 id="change-file-1">Change file:</h4>
@@ -366,38 +401,11 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-8">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;body&gt;</span>
-        <span class="nt">&lt;nav&gt;</span>
-  
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
-  
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about.html"</span> <span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
-  
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/blog.html"</span> <span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;</span>
-  
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/staff.html"</span> <span class="nt">&gt;</span>Staff<span class="nt">&lt;/a&gt;</span>
-  
-<span class="nt">&lt;/nav&gt;</span>
-        <span class="nt">&lt;h1&gt;</span>Kiwifruit<span class="nt">&lt;/h1&gt;</span>
 
-<span class="nt">&lt;p&gt;</span>
-  22 Aug 2018
-  
-  
-    - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/authors/ted.html"</span><span class="nt">&gt;</span>Ted Doe<span class="nt">&lt;/a&gt;</span>
-  
-<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
-berry of several species of woody vines in the genus Actinidia.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>The most common cultivar group of kiwifruit is oval, about the size of a large
-hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in
-diameter). It has a fibrous, dull greenish-brown skin and bright green or
-golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
-texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
-
-    <span class="nt">&lt;/body&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body&gt;
+    {% include navigation.html %}
+    {{ content }}
+&lt;/body&gt;
 </code></pre></div></div>
 
 <h4 id="add-styling-to-file">Add styling to file:</h4>
@@ -406,14 +414,15 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-9">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;nav&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">&gt;</span>
-        Home
-      <span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about.html"</span> <span class="nt">&gt;</span>
-        About
-      <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/nav&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;nav&gt;
+  &lt;a href="/" {% if page.url == "/" %}style="color: red;"{% endif %}&gt;
+    Home
+  &lt;/a&gt;
+  &lt;a href="/about.html" {% if page.url == "/about.html" %}style="color: red;"{% endif %}&gt;
+    About
+  &lt;/a&gt;
+&lt;/nav&gt;
 </code></pre></div></div>
 
 <h2 id="data-files">Data files</h2>
@@ -444,25 +453,14 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-11">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;nav&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">&gt;</span>
-          Home
-        <span class="nt">&lt;/a&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about.html"</span> <span class="nt">&gt;</span>
-          About
-        <span class="nt">&lt;/a&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/blog.html"</span> <span class="nt">&gt;</span>
-          Blog
-        <span class="nt">&lt;/a&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/staff.html"</span> <span class="nt">&gt;</span>
-          Staff
-        <span class="nt">&lt;/a&gt;</span>
-      
-    <span class="nt">&lt;/nav&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;nav&gt;
+  {% for item in site.data.navigation %}
+    &lt;a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}&gt;
+      {{ item.name }}
+    &lt;/a&gt;
+  {% endfor %}
+&lt;/nav&gt;
 </code></pre></div></div>
 
 <h2 id="assets">Assets</h2>
@@ -477,21 +475,14 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-12">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;nav&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">&gt;</span>Home
-        <span class="nt">&lt;/a&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about.html"</span> <span class="nt">&gt;</span>About
-        <span class="nt">&lt;/a&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/blog.html"</span> <span class="nt">&gt;</span>Blog
-        <span class="nt">&lt;/a&gt;</span>
-      
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/staff.html"</span> <span class="nt">&gt;</span>Staff
-        <span class="nt">&lt;/a&gt;</span>
-      
-    <span class="nt">&lt;/nav&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;nav&gt;
+  {% for item in site.data.navigation %}
+    &lt;a href="{{ item.link }}" {% if page.url == item.link %}
+         class="current"{% endif %}&gt;{{ item.name }}
+    &lt;/a&gt;
+  {% endfor %}
+&lt;/nav&gt;
 </code></pre></div></div>
 
 <h4 id="add-file-3">Add file:</h4>
@@ -525,7 +516,8 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-15">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/styles.css"</span><span class="nt">&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="/assets/css/styles.css"&gt;
 </code></pre></div></div>
 
 <h2 id="blogging">Blogging</h2>
@@ -539,19 +531,21 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-16">Code:</h4>
-<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">    ---</span>
-    layout: post
-    author: jill
-<span class="p">    ---</span>
-    A banana is an edible fruit – botanically a berry – produced by several kinds
-    of large herbaceous flowering plants in the genus Musa.<span class="sb">
 
-    In some countries, bananas used for cooking may be called "plantains",
-    distinguishing them from dessert bananas. The fruit is variable in size, color,
-    and firmness, but is usually elongated and curved, with soft flesh rich in
-    starch covered with a rind, which may be green, yellow, red, purple, or brown
-    when ripe.
-</span></code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+author: jill
+---
+A banana is an edible fruit – botanically a berry – produced by several kinds
+of large herbaceous flowering plants in the genus Musa.
+
+In some countries, bananas used for cooking may be called "plantains",
+distinguishing them from dessert bananas. The fruit is variable in size, color,
+and firmness, but is usually elongated and curved, with soft flesh rich in
+starch covered with a rind, which may be green, yellow, red, purple, or brown
+when ripe.
+</code></pre></div></div>
+
 <blockquote>
   <p>author is a custom variable, it’s not required and could have been named something like creator.</p>
 </blockquote>
@@ -562,31 +556,15 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-17">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ---  
-    layout: default
-    ---
-    <span class="nt">&lt;h1&gt;</span>Tutorial Summary<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>23 Jan 2019 - qoolixiloop<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Kiwifruit<span class="nt">&lt;/h1&gt;</span>
 
-<span class="nt">&lt;p&gt;</span>
-  22 Aug 2018
-  
-  
-    - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/authors/ted.html"</span><span class="nt">&gt;</span>Ted Doe<span class="nt">&lt;/a&gt;</span>
-  
-<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
-berry of several species of woody vines in the genus Actinidia.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>The most common cultivar group of kiwifruit is oval, about the size of a large
-hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in
-diameter). It has a fibrous, dull greenish-brown skin and bright green or
-golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
-texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">---  
+</span>layout: default
+---
+&lt;h1&gt;{{ page.title }}&lt;/h1&gt;
+&lt;p&gt;{{ page.date | date_to_string }} - {{ page.author }}&lt;/p&gt;
+{{ content }}
 </code></pre></div></div>
+
 <blockquote>
   <p>This is an example of layout inheritance. The post layout outputs the title, date, author and content body which is wrapped by the default layout.</p>
 </blockquote>
@@ -597,49 +575,20 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-18">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ---
-    layout: default
-    title: Blog
-    ---
-    <span class="nt">&lt;h1&gt;</span>Latest Posts<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;ul&gt;</span>
-      
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/2019/01/23/tutorial-summary.html"</span><span class="nt">&gt;</span>Tutorial Summary<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-          <span class="nt">&lt;p&gt;&lt;h1</span> <span class="na">id=</span><span class="s">"jekyll-tutorial"</span><span class="nt">&gt;</span>Jekyll Tutorial<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;blockquote&gt;</span>
-  <span class="nt">&lt;p&gt;</span>This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial.  <span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
-This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll.<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
-Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/blockquote&gt;</span>
 
-<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/2018/08/22/kiwifruit.html"</span><span class="nt">&gt;</span>Kiwifruit<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-          <span class="nt">&lt;p&gt;&lt;p&gt;</span>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
-berry of several species of woody vines in the genus Actinidia.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/2018/08/21/apples.html"</span><span class="nt">&gt;</span>Apples<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-          <span class="nt">&lt;p&gt;&lt;p&gt;</span>An apple is a sweet, edible fruit produced by an apple tree.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/2018/08/20/bananas.html"</span><span class="nt">&gt;</span>Bananas<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-          <span class="nt">&lt;p&gt;&lt;p&gt;</span>A banana is an edible fruit – botanically a berry – produced by several kinds
-of large herbaceous flowering plants in the genus Musa.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      
-    <span class="nt">&lt;/ul&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+title: Blog
+---
+&lt;h1&gt;Latest Posts&lt;/h1&gt;
+&lt;ul&gt;
+  {% for post in site.posts %}
+    &lt;li&gt;
+      &lt;h2&gt;&lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;&lt;/h2&gt;
+      &lt;p&gt;{{ post.excerpt }}&lt;/p&gt;
+    &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
 </code></pre></div></div>
 
 <p>Typically a blog has a page which lists all the posts.</p>
@@ -733,49 +682,62 @@ Now you can remove layout from the front matter of all pages and posts (but not 
 <p>Iterate over site.authors</p>
 
 <h4 id="code-23">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ---
-    layout: default
-    title: Staff
-    ---
-    <span class="nt">&lt;h1&gt;</span>Staff<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;ul&gt;</span>
-      
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/authors/jill.html"</span><span class="nt">&gt;</span>Jill Smith<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-          <span class="nt">&lt;h3&gt;</span>Chief Editor<span class="nt">&lt;/h3&gt;</span>
-          <span class="nt">&lt;p&gt;&lt;p&gt;</span>Jill is an avid fruit grower based in the south of France.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/authors/qoolixiloop.html"</span><span class="nt">&gt;</span>Qool ixi Loop<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-          <span class="nt">&lt;h3&gt;</span>Chief Programmer<span class="nt">&lt;/h3&gt;</span>
-          <span class="nt">&lt;p&gt;&lt;p&gt;</span>Qoolixi doesn’t like Apple he likes Linux.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/authors/ted.html"</span><span class="nt">&gt;</span>Ted Doe<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
-          <span class="nt">&lt;h3&gt;</span>Writer<span class="nt">&lt;/h3&gt;</span>
-          <span class="nt">&lt;p&gt;&lt;p&gt;</span>Ted has been eating fruit since he was baby.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      
-    <span class="nt">&lt;/ul&gt;</span>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+title: Staff
+---
+&lt;h1&gt;Staff&lt;/h1&gt;
+&lt;ul&gt;
+  {% for author in site.authors %}
+    &lt;li&gt;
+      &lt;h2&gt;&lt;a href="{{ author.url }}"&gt;{{ author.name }}&lt;/a&gt;&lt;/h2&gt;
+      &lt;h3&gt;{{ author.position }}&lt;/h3&gt;
+      &lt;p&gt;{{ author.content | markdownify }}&lt;/p&gt;
+    &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
 </code></pre></div></div>
+
 <blockquote>
-  <p>Since the content is markdown, you need to run it through the markdownify filter. This happens automatically when outputting using &lt;h1&gt;Kiwifruit&lt;/h1&gt;</p>
+  <p>Since the content is markdown, you need to run it through the markdownify filter. This happens automatically when outputting using &lt;html&gt;</p>
 </blockquote>
+<head>
+    <meta charset="utf-8" />
+    <title>Kiwifruit</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link type="application/atom+xml" rel="alternate" href="/qool-jekyll-loop/feed.xml" title="Official Jekyll step by step tutorial with theme" />
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Kiwifruit | Official Jekyll step by step tutorial with theme</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Kiwifruit" />
+<meta name="author" content="ted" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia." />
+<meta property="og:description" content="Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia." />
+<link rel="canonical" href="/qool-jekyll-loop/2018/08/22/kiwifruit.html" />
+<meta property="og:url" content="/qool-jekyll-loop/2018/08/22/kiwifruit.html" />
+<meta property="og:site_name" content="Official Jekyll step by step tutorial with theme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-22T00:00:00+02:00" />
+<script type="application/ld+json">
+{"description":"Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia.","@type":"BlogPosting","headline":"Kiwifruit","dateModified":"2018-08-22T00:00:00+02:00","datePublished":"2018-08-22T00:00:00+02:00","url":"/qool-jekyll-loop/2018/08/22/kiwifruit.html","mainEntityOfPage":{"@type":"WebPage","@id":"/qool-jekyll-loop/2018/08/22/kiwifruit.html"},"author":{"@type":"Person","name":"ted"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
 
-<p>
-  22 Aug 2018
+  </head>
+<body>
+    <nav>
   
+    <a href="/">Home</a>
   
-    - <a href="/authors/ted.html">Ted Doe</a>
+    <a href="/about.html">About</a>
   
-</p>
-
-<p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
+    <a href="/blog.html">Blog</a>
+  
+    <a href="/staff.html">Staff</a>
+  
+</nav>
+    <p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
 berry of several species of woody vines in the genus Actinidia.</p>
 
 <p>The most common cultivar group of kiwifruit is oval, about the size of a large
@@ -783,7 +745,10 @@ hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) i
 diameter). It has a fibrous, dull greenish-brown skin and bright green or
 golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
 texture, with a sweet and unique flavor.</p>
-<p>in a layout.</p>
+
+  </body>
+<p>&lt;/html&gt;
+ in a layout.</p>
 
 <h4 id="change-file-4">Change file:</h4>
 <ul>
@@ -801,35 +766,20 @@ texture, with a sweet and unique flavor.</p>
 </ul>
 
 <h4 id="code-25">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ---
-    layout: default
-    ---
-    <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
-    <span class="nt">&lt;h2&gt;&lt;/h2&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Kiwifruit<span class="nt">&lt;/h1&gt;</span>
 
-<span class="nt">&lt;p&gt;</span>
-  22 Aug 2018
-  
-  
-    - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/authors/ted.html"</span><span class="nt">&gt;</span>Ted Doe<span class="nt">&lt;/a&gt;</span>
-  
-<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
-berry of several species of woody vines in the genus Actinidia.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>The most common cultivar group of kiwifruit is oval, about the size of a large
-hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in
-diameter). It has a fibrous, dull greenish-brown skin and bright green or
-golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
-texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
-
-    <span class="nt">&lt;h2&gt;</span>Posts<span class="nt">&lt;/h2&gt;</span>
-    <span class="nt">&lt;ul&gt;</span>
-      
-      
-    <span class="nt">&lt;/ul&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+&lt;h1&gt;{{ page.name }}&lt;/h1&gt;
+&lt;h2&gt;{{ page.position }}&lt;/h2&gt;
+{{ content }}
+&lt;h2&gt;Posts&lt;/h2&gt;
+&lt;ul&gt;
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+  {% for post in filtered_posts %}
+    &lt;li&gt;&lt;a href="{{ post.url }}"&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
 </code></pre></div></div>
 
 <h4 id="change-file-5">Change file:</h4>
@@ -838,34 +788,19 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-26">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ---
-    layout: default
-    ---
-    <span class="nt">&lt;h1&gt;</span>Tutorial Summary<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p&gt;</span>
-      23 Jan 2019
-      
-      
-    <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Kiwifruit<span class="nt">&lt;/h1&gt;</span>
 
-<span class="nt">&lt;p&gt;</span>
-  22 Aug 2018
-  
-  
-    - <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/authors/ted.html"</span><span class="nt">&gt;</span>Ted Doe<span class="nt">&lt;/a&gt;</span>
-  
-<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
-berry of several species of woody vines in the genus Actinidia.<span class="nt">&lt;/p&gt;</span>
-
-<span class="nt">&lt;p&gt;</span>The most common cultivar group of kiwifruit is oval, about the size of a large
-hen’s egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in
-diameter). It has a fibrous, dull greenish-brown skin and bright green or
-golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
-texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+&lt;h1&gt;{{ page.title }}&lt;/h1&gt;
+&lt;p&gt;
+  {{ page.date | date_to_string }}
+  {% assign author = site.authors | where: 'short_name', page.author | first %}
+  {% if author %}
+    - &lt;a href="{{ author.url }}"&gt;{{ author.name }}&lt;/a&gt;
+  {% endif %}
+&lt;/p&gt;
+{{ content }}
 </code></pre></div></div>
 
 <h2 id="deployment">Deployment</h2>
@@ -960,24 +895,9 @@ texture, with a sweet and unique flavor.<span class="nt">&lt;/p&gt;</span>
 </ul>
 
 <h4 id="code-29">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;link</span> <span class="na">type=</span><span class="s">"application/atom+xml"</span> <span class="na">rel=</span><span class="s">"alternate"</span> <span class="na">href=</span><span class="s">"/qool-jekyll-loop/feed.xml"</span> <span class="na">title=</span><span class="s">"Official Jekyll step by step tutorial with theme"</span> <span class="nt">/&gt;</span>
-    <span class="c">&lt;!-- Begin Jekyll SEO tag v2.5.0 --&gt;</span>
-<span class="nt">&lt;title&gt;</span>Tutorial Summary | Official Jekyll step by step tutorial with theme<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"generator"</span> <span class="na">content=</span><span class="s">"Jekyll v3.7.4"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:title"</span> <span class="na">content=</span><span class="s">"Tutorial Summary"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"author"</span> <span class="na">content=</span><span class="s">"qoolixiloop"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:locale"</span> <span class="na">content=</span><span class="s">"en_US"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"description"</span> <span class="na">content=</span><span class="s">"Jekyll Tutorial This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial. This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll. Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories."</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:description"</span> <span class="na">content=</span><span class="s">"Jekyll Tutorial This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial. This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll. Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories."</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"/qool-jekyll-loop/2019/01/23/tutorial-summary.html"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:url"</span> <span class="na">content=</span><span class="s">"/qool-jekyll-loop/2019/01/23/tutorial-summary.html"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:site_name"</span> <span class="na">content=</span><span class="s">"Official Jekyll step by step tutorial with theme"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"og:type"</span> <span class="na">content=</span><span class="s">"article"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">"article:published_time"</span> <span class="na">content=</span><span class="s">"2019-01-23T00:00:00+01:00"</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/ld+json"</span><span class="nt">&gt;</span>
-<span class="p">{</span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"Jekyll Tutorial This repository hosts the source code as well as the compiled webpage of the official Jekyll step by step tutorial. This README.md file show all the necessary steps and commands to install Ruby, a Ruby package manager, a Ruby bundler gem, Jekyll and everything else that is needed to build a website with Jekyll. Jekyll is a simple, blog-aware, static site generator perfect for personal, project, or organization sites. Think of it like a file-based CMS, without all the complexity. Jekyll takes your content, renders Markdown and Liquid templates, and spits out a complete, static website ready to be served by Apache, Nginx or another web server. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories."</span><span class="p">,</span><span class="s2">"@type"</span><span class="p">:</span><span class="s2">"BlogPosting"</span><span class="p">,</span><span class="s2">"headline"</span><span class="p">:</span><span class="s2">"Tutorial Summary"</span><span class="p">,</span><span class="s2">"dateModified"</span><span class="p">:</span><span class="s2">"2019-01-23T00:00:00+01:00"</span><span class="p">,</span><span class="s2">"datePublished"</span><span class="p">:</span><span class="s2">"2019-01-23T00:00:00+01:00"</span><span class="p">,</span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"/qool-jekyll-loop/2019/01/23/tutorial-summary.html"</span><span class="p">,</span><span class="s2">"mainEntityOfPage"</span><span class="p">:{</span><span class="s2">"@type"</span><span class="p">:</span><span class="s2">"WebPage"</span><span class="p">,</span><span class="s2">"@id"</span><span class="p">:</span><span class="s2">"/qool-jekyll-loop/2019/01/23/tutorial-summary.html"</span><span class="p">},</span><span class="s2">"author"</span><span class="p">:{</span><span class="s2">"@type"</span><span class="p">:</span><span class="s2">"Person"</span><span class="p">,</span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"qoolixiloop"</span><span class="p">},</span><span class="s2">"@context"</span><span class="p">:</span><span class="s2">"http://schema.org"</span><span class="p">}</span><span class="nt">&lt;/script&gt;</span>
-<span class="c">&lt;!-- End Jekyll SEO tag --&gt;</span>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% feed_meta %}
+{% seo %}
 </code></pre></div></div>
 
 <h4 id="run-server-again-and-check-files">Run server again and check files:</h4>
@@ -1009,8 +929,12 @@ Running a command like bundle with global variable “JEKYLL_ENV=production”, 
 </ul>
 
 <h4 id="code-30">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if jekyll.environment == "production" %}  
+  &lt;script src="my-analytics-script.js"&gt;&lt;/script&gt;  
+{% endif %}
 </code></pre></div></div>
+
 <blockquote>
   <p>This code placed anywhere in your code, will only run, if you run build in production mode.</p>
 </blockquote>
@@ -1019,9 +943,10 @@ Running a command like bundle with global variable “JEKYLL_ENV=production”, 
 <p>you would do the following:</p>
 
 <h4 id="code-31">Code:</h4>
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    
-    ....
-    
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% if jekyll.environment == "development" %}
+....
+{% endif %}
 </code></pre></div></div>
 
 <h4 id="configuration-files">Configuration files:</h4>
@@ -1055,5 +980,12 @@ Running a command like bundle with global variable “JEKYLL_ENV=production”, 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    https://learn.cloudcannon.com/jekyll-cheat-sheet/  
 </code></pre></div></div>
 
+  </body>
+</html>
+
+      </section>
+    </div>
+
+    
   </body>
 </html>
