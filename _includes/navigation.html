@@ -1,5 +1,8 @@
-<nav>
+<div class="header">
+<nav id="header_navigation" class="header_navigation">
   {% for item in site.data.navigation %}
     <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
   {% endfor %}
 </nav>
+</div>
+<div style="clear:both;"></div>

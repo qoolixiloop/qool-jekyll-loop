@@ -1,7 +1,7 @@
 ---
 layout: default_
 short_name: qoolixi
-name: Qool ixi Loop
+name: qool ixi loop
 position: Chief Programmer
 ---
-Qoolixi doesn't like Apple he likes Linux.
+Qoolixi doesn't like Apples he likes Linux.

@@ -23,11 +23,13 @@ email: qoolixiloop@gmx.ch
 description: >- # this means to ignore newlines until "baseurl:"
   This is the result of the official step by step tutorial on Jekyll's website enhanced by a nice theme. 
 baseurl: "qool-jekyll-loop" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" #"localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  qoolixiloop
 
 # Build settings
 markdown: kramdown
+kramdown:
+  parse_block_html: true
 #theme: minima
 theme: jekyll-theme-hacker
 plugins:
