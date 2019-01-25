@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/qool-jekyll-loop/assets/css/style.css?v=40ef67f6e65be66ea6aaa599a8531bf3ed988788">
+    <link rel="stylesheet" href="/qool-jekyll-loop/assets/css/style.css?v=755162f5975ff0c723beba5487c50538daf6b398">
     <link rel="stylesheet" href="/qool-jekyll-loop/assets/css/main.css">
 
 <!-- Begin Jekyll SEO tag v2.5.0 -->
@@ -14,11 +14,11 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is the result of the official step by step tutorial on Jekyll’s website enhanced by a nice theme." />
 <meta property="og:description" content="This is the result of the official step by step tutorial on Jekyll’s website enhanced by a nice theme." />
-<link rel="canonical" href="/qool-jekyll-loop/" />
-<meta property="og:url" content="/qool-jekyll-loop/" />
+<link rel="canonical" href="http://localhost:4000/qool-jekyll-loop/" />
+<meta property="og:url" content="http://localhost:4000/qool-jekyll-loop/" />
 <meta property="og:site_name" content="Enhanced official Jekyll step by step tutorial with theme" />
 <script type="application/ld+json">
-{"description":"This is the result of the official step by step tutorial on Jekyll’s website enhanced by a nice theme.","@type":"WebSite","headline":"Home","url":"/qool-jekyll-loop/","name":"Enhanced official Jekyll step by step tutorial with theme","@context":"http://schema.org"}</script>
+{"description":"This is the result of the official step by step tutorial on Jekyll’s website enhanced by a nice theme.","@type":"WebSite","headline":"Home","url":"http://localhost:4000/qool-jekyll-loop/","name":"Enhanced official Jekyll step by step tutorial with theme","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -42,37 +42,40 @@
 	 <div class="header">
   <nav id="header_navigation" class="header_navigation">
     
-    <a href="/qool-jekyll-loop/" 
+      <a href="/qool-jekyll-loop/" 
       
        class="header_navigation_current"
       >
       Home
     </a>
     
-    <a href="/qool-jekyll-loop/about.html" 
+      <a href="/qool-jekyll-loop/about.html" 
       >
       About
     </a>
     
-    <a href="/qool-jekyll-loop/blog.html" 
+      <a href="/qool-jekyll-loop/blog.html" 
       >
       Blog
     </a>
     
-    <a href="/qool-jekyll-loop/staff.html" 
+      <a href="/qool-jekyll-loop/staff.html" 
       >
       Staff
     </a>
     
   </nav>
 </div>
+
+<!--needed to break the float:left after the navi buttons-->
 <div style="clear:both;"></div>
-<p>/</p>
+
+<p>page.url: /</p>
 
          <br><br>
         <h1 id="hello-world">hello world!</h1>
 
-<h2 id="solution-of-the-official-step-by-step-tutorial-on-jekylls-website">Solution of the official step by step tutorial on Jekylls website</h2>
+<h2 id="enhanced-solution-of-the-official-step-by-step-tutorial-on-jekylls-website">Enhanced solution of the official step by step tutorial on Jekylls website</h2>
 
 <h3 id="i-added-five-features">I added five features</h3>
 <ul>
@@ -83,17 +86,16 @@
   <li>Some infos about me, and a donate button</li>
 </ul>
 
-<h3 id="steps-to-make-the-theme-jekyll-theme-hacker-workh3">Steps to make the theme jekyll-theme-hacker work&lt;/h3&gt;</h3>
-<p>In order to make the theme work I added to <code class="highlighter-rouge">_config.yml</code> the line <code class="highlighter-rouge">theme: jekyll-theme-hacker</code> and changed the name of our <code class="highlighter-rouge">_layouts/default.html</code> file to <code class="highlighter-rouge">_layouts/default_.html</code>. To the front matter of the file <code class="highlighter-rouge">_layouts/default_.html</code> I added  <code class="highlighter-rouge">layout: default</code>, which is the template file in the gem <code class="highlighter-rouge">jekyll-theme-hacker</code>.</p>
+<h3 id="steps-to-make-the-theme-jekyll-theme-hacker-work">Steps to make the theme jekyll-theme-hacker work</h3>
+<ol>
+  <li><strong>Copy the default file and do some renaming:</strong> I renamed <em>_layouts/default.html</em> to <em>_layouts/idefault.html</em> and copied/pasted the <em>_layouts/default.html</em> from the jekyll-theme-hacker in it. Then I changed the front matter of all files, which required <em>layout:default</em> to <em>layout:idefault</em>. I tried to keep</li>
+  <li><strong>Add css for navigation and do some renaming:</strong> I renamed the file <em>assets/css/style.scss</em> to <em>assets/css/main.scss</em> and the file <em>_scss/main.scss</em> to <em>_scss/navi.scss</em> in order to make clear that the <em>_sass</em> folder holds the snippets, which are imported into <em>assets/css/main.scss</em>. The latter will be included into the head-tags of the compiled html files.</li>
+  <li><strong>Make all links relativ:</strong> In order to work on github project pages and not only on localhost and on github user pages, relative link variables or filters have to be included everywhere. For ankers like so: <code class="highlighter-rouge">&lt;a href="/qool-jekyll-loop"&gt;</code> and for the css file added to the header like so: <code class="highlighter-rouge">&lt;link rel="stylesheet" href="/qool-jekyll-loop/assets/css/main.css"&gt;</code>. I also output all link variables to the pages, because all these frameworks are very smart in defining rules to split up the files. But if you are not familiar with the magic that’s used to put them together during compilation, you probably want to see in an example what’s stored in the variables.</li>
+  <li><strong>Change value of key-variable baseurl:</strong> In <em>config.yml</em> we had <code class="highlighter-rouge">baseurl:""</code> when we worked on localhost or when we pushed to github’s user pages. But if we use github’s project pages we need to change the key:value pair to <code class="highlighter-rouge">baseurl: "&lt;/repository_name&gt;"</code>.</li>
+  <li><strong>Starting server locally:</strong> With all those changes the server starts at <em>http://127.0.0.1:4000//qool-jekyll-loop/</em>. To work on github project pages <em>gh-pages branch</em>, no changes are needed. The localhost is automatically replaced with <em>https://qoolixiloop.github.io</em>.</li>
+</ol>
 
-<p>If you are wondering, how the theme’s css gets loaded please read on. The entry in <code class="highlighter-rouge">_config.yml</code> is just a <code class="highlighter-rouge">key:value</code> pair, which is used in a file <code class="highlighter-rouge">assets/css/style.scss</code> to import the theme’s css with  <code class="highlighter-rouge">@import "jekyll-theme-hacker";</code> If we rename the file e.g. to <code class="highlighter-rouge">assets/css/style_.scss</code>, we can remove the import because then the theme-gem’s file <code class="highlighter-rouge">assets/css/style.scss</code> is loaded, which has the same import in it. But the <code class="highlighter-rouge">assets/css/style.scss</code> file is loaded in the first place, because the gem’s <code class="highlighter-rouge">_layouts/default.html</code> and our <code class="highlighter-rouge">_layouts/default_.html</code> contain the following line <code class="highlighter-rouge">&lt;link rel="stylesheet" href="/assets/css/style.css"&gt;</code></p>
-
-<h3 id="code-to-make-navigation-links-look-like-buttons">Code to make navigation links look like buttons</h3>
-<p>I added css classes to file <code class="highlighter-rouge">_sass/main.scss</code> and used them in <code class="highlighter-rouge">_includes/navigation.html</code></p>
-
-<h3 id="please-visit-the-nicely-rendered-tutorial-summary">Please visit the nicely rendered tutorial summary</h3>
-<p>It is available by clicking the navigation button <code class="highlighter-rouge">Blog</code><br />
-<br /></p>
+<p><br /></p>
 
 <p align="center">
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=ZJSNJNBGL8MVE&amp;source=url" target="_blank">
