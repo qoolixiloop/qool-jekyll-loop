@@ -103,3 +103,11 @@ a { color: #63c0f5; text-shadow: 0 0 5px rgba(104, 182, 255, 0.5); }
 .cf:after { clear: both; }
 
 .cf { zoom: 1; }
+
+.current { color: green; }
+
+.header_navigation a { float: left; /*COMMENT: -top, -right, -bottom, -left*/ padding: 14px 20px 14px 20px; background-color: #282828; text-align: center; border: 2px solid #3c3c3c; border-radius: 15px; }
+
+.header_navigation a:hover { background-color: #3c3c3c; color: black; }
+
+.header_navigation a.active { background-color: #3c3c3c; color: white; }
