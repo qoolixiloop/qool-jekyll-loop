@@ -1,5 +1,5 @@
 ---
-layout: default_
+layout: post
 author: qoolixiloop
 ---
 

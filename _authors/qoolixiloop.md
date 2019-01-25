@@ -1,5 +1,5 @@
 ---
-layout: default_
+layout: author
 short_name: qoolixi
 name: qool ixi loop
 position: Chief Programmer

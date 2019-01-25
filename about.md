@@ -1,5 +1,5 @@
 ---
-layout: default_
+layout: idefault
 title: About
 ---
 # About page

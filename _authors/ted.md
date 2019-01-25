@@ -1,5 +1,5 @@
 ---
-layout: default_
+layout: author
 short_name: ted
 name: Ted Doe
 position: Writer
