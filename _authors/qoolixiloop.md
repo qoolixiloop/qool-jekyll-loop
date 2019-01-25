@@ -1,6 +1,6 @@
 ---
 layout: author
-short_name: qoolixi
+short_name: qoolixiloop
 name: qool ixi loop
 position: Chief Programmer
 ---
